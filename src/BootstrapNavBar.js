@@ -13,7 +13,7 @@ class BootstrapNavBar extends Component{
 		    	<li><Link to="/">Home</Link></li>
 		      	<li><Link to="/about">About</Link></li>
 		      	<li><Link to="/images">Images</Link></li>
-		      	<li><Link to="/three">Three</Link></li>
+		      	<li><Link to="/weather">Weather</Link></li>
 		      	<li><Link to="/mayor">MayorMessage</Link></li>
 		    </ul>
 		  </div>

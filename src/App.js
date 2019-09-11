@@ -4,7 +4,8 @@ import './App.css';
 import BootstrapNavBar from './BootstrapNavBar'
 import Home from './Home';
 import About from './About';
-import Images from './Images'
+import Images from './Images';
+import Atlanta from './Atlanta';
 
 import MayorMessage from './MayorMessage';
 
@@ -30,7 +31,8 @@ class App extends Component {
         <Route path='/' component={BootstrapNavBar}></Route>
         <Route path='/' exact component={Home}></Route>
         <Route path='/about' component={About}></Route>
-        <Route path='/images' component={Images}></Route>
+        <Route path='/images' render={ () => <Images images={atlImages} />}></Route>
+        <Route path='/weather' component={Atlanta}></Route>
         <Route path='/mayor' component={MayorMessage}></Route>
 
       </Router>
