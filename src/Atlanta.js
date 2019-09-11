@@ -17,13 +17,15 @@ class About extends Component {
 		fetch(url).then( resp => {
 			return resp.json()
 		}).then( resp2 => {
-			console.log(resp2)
+			// console.log(resp2)
 			this.setState({
 				temp: resp2.main.temp,
 				temp_min: resp2.main.temp_min,
 				temp_max: resp2.main.temp_max,
 				desc: resp2.weather[0].description
-			}, ()=>console.log(this.state))
+			}
+			// , ()=>console.log(this.state)
+			)
 		})
 		// 	, (weatherData) =>{
 		// 	console.log(weatherData);
@@ -35,11 +37,12 @@ class About extends Component {
 
 	render(){
 		return(
-			<div>
-				<h1>Temp: {this.state.temp}</h1>
-				<h1>High: {this.state.temp_max}</h1>
-				<h1>Low: {this.state.temp_min}</h1>
-				<h1>Forecast: {this.state.desc}</h1>
+			<div className='weather-container'>
+				<h1>Weather</h1>
+				<h3>Temp: {this.state.temp}</h3>
+				<h3>High: {this.state.temp_max}</h3>
+				<h3>Low: {this.state.temp_min}</h3>
+				<h3>Forecast: {this.state.desc}</h3>
 
 			</div>
 		);
